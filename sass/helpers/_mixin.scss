@@ -1,0 +1,50 @@
+@mixin text($color,$fs,$fw) {
+    color:$color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+@mixin flexEnd(){
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+}
+@mixin textHover(){
+    color:#00adef;
+}
+@mixin mediaQuery($screen) {
+    @if map-has-key($map: $breakpoints, $key:$screen) {
+        $value: map-get($map:$breakpoints, $key:$screen);
+
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "#{$screen }'has not found'";
+ 
+    }
+}
+@mixin overline($width,$height,$bc){
+    position: absolute;
+    top:0;
+    left:0;
+    width:$width;
+    height:$height;
+    background-color:$bc;
+}
+@mixin underline($width,$height,$bc){
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:$width;
+    height:$height;
+    background-color:$bc;
+}

@@ -1,0 +1,68 @@
+.owl-theme {
+    .owl-nav {
+        .owl-prev {
+            position: absolute;
+            top: 38%;
+            left: 3%;
+
+            &:hover {
+                background-color: none;
+                color: #DDD;
+            }
+
+            span {
+                font-size: 70px;
+                transition: color .3s linear;
+
+            }
+        }
+
+        [class*=owl-] {
+
+            &:hover {
+                background: none;
+
+                span {
+                    color: #DDD;
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .owl-next {
+            @extend .owl-prev;
+            left: 94%;
+
+        }
+    }
+
+}
+
+@include mediaQuery("medium") {
+    .owl-theme {
+        .owl-nav {
+            .owl-prev {
+                top: 18%;
+            }
+        }
+    }
+
+}
+
+// END OWL CAROUSEL SETTING
+
+.btn-load-more {
+    position: relative;
+    margin-top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include text(#999, 15px, 400);
+    background: linear-gradient(#303030, #202020);
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    text-align: center;
+}
+

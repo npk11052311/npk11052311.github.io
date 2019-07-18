@@ -1,0 +1,178 @@
+.carousel {
+    width: 100%;
+    height: auto;
+
+    .owl-carousel {
+        position: relative;
+
+        .item {
+            .carousel__item {
+                position: relative;
+                background-image: url(./../img/01-mercedes-benz-2020-mercedes-amg-a-45-4matic-w177-mercedes-amg-cla-45-4matic-c118-designo-mountain-grey-magno-3400x1440.jpeg);
+                background-position: center;
+                height: 650px;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                .carousel__overlay {
+                    position: absolute;
+                    top: 10%;
+                    left: 8%;
+                    width: 40%;
+
+                    h1 {
+                       
+                        position: relative;
+                        padding: 30px 0;
+
+                        &::before {
+                            content: '';
+                            @include overline(60px,2px,white);
+
+                        }
+                    }
+
+                    button {
+                        background-color: #333;
+                        border: 1px solid #333;
+                        padding: 7px 20px;
+                        @include text(#DDD, 14px, 400);
+
+                        &:hover {
+                            background-color: #000;
+                            color: white;
+                        }
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    bottom: 3%;
+                    left: 8%;
+                    width: 40%;
+                    @include text(white, 13px, 300);
+                }
+
+                &.item2 {
+                    background-image: url(./../img/bg2.jpeg);
+                }
+
+                &.item3 {
+                    background-image: url(./../img/bg3.jpeg);
+
+                    .carousel__overlay {
+
+                        h1 {
+                            color: black;
+
+                            &::before {
+                                background-color: black;
+                            }
+                        }
+                    }
+                }
+
+                &.item4 {
+                    background-image: url(./../img/bg4.jpeg);
+                }
+
+                &.item5 {
+                    background-image: url(./../img/bg5.jpeg);
+                }
+
+                &.item6 {
+                    background-image: url(./../img/bg6.jpeg);
+                }
+
+                &.item7 {
+                    background-image: url(./../img/bg7.jpeg);
+                }
+
+                &.item8 {
+                    background-image: url(./../img/bg8.jpeg);
+                    p{
+                        color:black;
+                    }
+                }
+
+                &.item9 {
+                    background-image: url(./../img/bg9.jpeg);
+                }
+
+
+            }
+
+            .carousel__none {
+                display: none;
+                min-height: 270px;
+                max-height: 270px;
+                padding: 30px 0;
+                background-color: #f4f4f4;
+                color: black;
+
+                .carousel__none-content {
+                    width: 100%;
+
+                    h1 {
+                        color:black;
+                        padding: 20px 0;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                      
+                            @include overline(60px,1.5px,black)
+
+                        }
+                    }
+
+                    button {
+                        background-color: #333;
+                        border: 1px solid #333;
+                        padding: 7px 20px;
+                        @include text(#DDD, 14px, 400);
+
+                        &:hover {
+                            background-color: #000;
+                            color: white;
+                        }
+                    }
+
+
+                    p {
+                        padding-top: 20px;
+                        @include text(black, 13px, 300);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery('medium') {
+    .carousel {
+        .owl-carousel {
+            .item {
+                .carousel__item {
+                    height: 400px;
+
+                    .carousel__overlay,
+                    p {
+                        display: none;
+                    }
+
+                }
+
+                .carousel__none {
+                    display: block;
+                    padding:30px 20px;
+                    h1{
+                        font-size:22px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+}

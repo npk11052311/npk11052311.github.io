@@ -1,0 +1,42 @@
+.inner__right {
+    position: fixed;
+    z-index: 999;
+    right: -155px;
+    top: 35%;
+
+    ul {
+        li {
+            @include flexCenter;
+            justify-content: start;
+            margin-top: 1px;
+            background-color: #1f1f1f;
+            @include text(white, 14px, 400);
+            list-style-type: none;
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: all .4s ease-in;
+            position: relative;
+            cursor: pointer;
+            right: 0;
+
+            span {
+                i {
+                    font-size: 25px;
+                    padding: 10px;
+                }
+            }
+
+            &:hover {
+                right: 155px;
+            }
+
+        }
+    }
+
+}
+@include mediaQuery('medium'){
+    .inner__right{
+        display:none;
+    }
+}

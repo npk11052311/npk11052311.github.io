@@ -1,0 +1,95 @@
+.contact {
+    padding-bottom: 20px;
+    .contact__top {
+        position: relative;
+        &::before{
+            content:'';
+            
+            @include underline(100%,1px,#333);
+            left:15px;
+
+        }
+        .contact__title {
+            position: relative;
+
+            &::before {
+                content: '';
+                @include overline(60px, 2px, white);
+            }
+
+            h1 {
+                padding: 20px 0;
+                @include text(white, 26px, 300);
+            }
+        }
+    }
+
+    .contact__left {
+        margin-top: 20px;
+
+        .contact__form {
+            form {
+                .input-group {
+                    width: 90%;
+
+                    input {
+                        background-color: #2a2a2a;
+                        border: 1px solid transparent;
+                        @include text(#fff, 18px, 400);
+                        font-family: 'Playfair Display';
+
+                        &:focus {
+                            outline: none;
+                            border: 1px solid #555;
+                            box-shadow: none;
+                        }
+                    }
+
+                    .input-group-append {
+                        width: 30%;
+
+                        button {
+                            @include text(#999, 13px, 400);
+                            width: 100%;
+                            background: linear-gradient(#242424, #0b0b0b);
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+
+                p {
+                    a {
+                        input[type=checkbox] {
+                            background-color: #2a2a2a;
+
+                            &.focus {
+                                color: white;
+                            }
+                        }
+
+                        @include text(#999, 13px, 400);
+                        text-decoration: none;
+                    }
+
+                    @include text(#999, 13px, 400);
+                }
+            }
+        }
+    }
+
+    .contact__right {
+        margin-top: 20px;
+
+        p {
+            @include text(#999, 13px, 400);
+
+        }
+
+        span {
+            i {
+                @include text(#999, 25px, 400);
+                padding-right: 50px;
+            }
+        }
+    }
+}

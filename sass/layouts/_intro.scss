@@ -1,0 +1,99 @@
+.intro {
+    position: relative;
+    padding: 50px 0;
+
+    .intro__content {
+        width: 85%;
+        margin: 0 auto;
+
+        .intro__top {
+            width: 100%;
+
+            h1 {
+                font-size: 28px;
+                padding: 15px 0;
+                position: relative;
+
+                &::before {
+                    content: '';
+                  @include overline(60px,2px,white);
+
+                }
+            }
+
+            p {
+
+                font-size: 12px;
+                padding-bottom: 20px;
+            }
+
+            button {
+                padding: 7px 15px;
+                background-color: #00ADEF;
+                border: 1px solid transparent;
+                color: white;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: #009bd6;
+                }
+            }
+        }
+
+        .intro__bottom {
+            margin-top: 50px;
+
+            .col-lg-3 {
+               
+                .intro__item {
+                    position: relative;
+
+                    img {
+                        cursor: pointer;
+                    }
+
+                    &::before {
+                        content: '';
+                        // position: absolute;
+                        // bottom: 0;
+                        // left: 0;
+                        // width: 100%;
+                        // background-color: #00adef;
+                        // height: 0;
+                        @include underline(100%,0,#00adef);
+                        z-index: 999;
+                        transition: all .1s linear;
+
+                    }
+
+                    &:hover {
+                        &::before {
+                            height: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery('medium') {
+    .intro {
+
+        .intro__content {
+            width: 97%;
+
+            .intro__top {
+                button{
+                    width:100%;
+                }
+            }
+            .intro__bottom{
+                .col-6,.col-lg-3{
+                  padding:0;
+                  padding:5px;  
+                }
+            }
+        }
+    }
+}

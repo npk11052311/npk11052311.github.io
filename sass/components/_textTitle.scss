@@ -1,0 +1,4 @@
+.title {
+    font-family: 'Playfair Display';
+    @include text(white, 32px, 400);
+}

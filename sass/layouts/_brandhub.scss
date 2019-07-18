@@ -1,0 +1,58 @@
+.brandhub {
+    margin-top: 50px;
+    .brandhub__content {
+        span {
+            @include text(white, 13px, 300);
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        p {
+            @include text(white, 13px, 300);
+
+        }
+
+        .brandhub__contact {
+            margin-top: 50px;
+            padding: 0 15px;
+
+            .brandhub__item {
+                padding: 0;
+
+                .brandhub__title {
+                    position: relative;
+                    border-bottom: 1px solid #333;
+                    width: 100%;
+
+                    h1 {
+                        padding: 20px 0;
+                        @include text(white, 26px, 300);
+                    }
+
+                    &::before {
+                        content: '';
+                        @include overline(60px, 2px, white);
+                    }
+                }
+
+                .brandhub__brand {
+                    margin-top: 30px;
+                    padding-bottom: 50px;
+
+                    p {
+                        margin-bottom: 0;
+
+                        a {
+                            @include text(#999, 13px, 400);
+                            text-decoration: none;
+                            &:hover {
+                                color: #00adef;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
